@@ -1,0 +1,80 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    height: 100vh;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.container{
+    background: green url(./img/table.png);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#new-deck{
+    margin: 0.5em 0 0 0.5em;
+    align-self: start;
+}
+
+#new-cards{
+    margin-top: auto;
+}
+
+#cards-img{
+    margin: auto;
+    align-self: center;
+    justify-self: center;
+}
+
+button{
+    padding: 0.5em;
+    background-color: yellow;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.placeholder{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 120px;
+    width: calc(120px * 5/7);
+}
+
+.placeholder:nth-of-type(1){
+    margin-bottom: 50px;
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+}
+
+#display-winner{
+    text-align: center;
+    font-weight: bold;
+}
+
+#cards-remaining{
+    margin: 10px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+#computer-points,#player-points{
+    text-align: center;
+}
