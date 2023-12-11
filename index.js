@@ -22,9 +22,14 @@ function getDeck(){
     .then(data => {
         deckId=data.deck_id;
         cardsRemaining.textContent = `Remaining cards: ${data.remaining}`
+        
         drawCardsBtn.disabled=false;
+        
         playerPoints=0;
         computerPoints=0;
+        computerPointsEl.textContent = `Computer Points: ${computerPoints}`
+        playerPointsEl.textContent = `Player Points: ${playerPoints}`
+        
         console.log(deckId)})
 }
 
